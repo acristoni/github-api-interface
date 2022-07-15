@@ -226,7 +226,7 @@ iframe {
  * Reset form fields to make them styleable
  */
 
-button,
+
 input,
 optgroup,
 select,

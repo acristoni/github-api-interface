@@ -1,15 +1,15 @@
 import React from "react";
 import App from "./App";
+import MareProvider from "./providers/mare-provider";
 import { ResetCSS } from "./global/resetCSS";
-import GithubProvider from "./providers/github-provider";
 
 const Providers = () => {
   return (
     <main>
-      <GithubProvider>
+      <MareProvider>
         <ResetCSS />
         <App />
-      </GithubProvider>
+      </MareProvider>
     </main>
   );
 };

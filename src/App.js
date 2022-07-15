@@ -1,30 +1,25 @@
-import React from "react";
-import Layout from "./components/layout";
-import NoSearch from "./components/no-search";
-import Profile from "./components/profile";
-import Repositories from "./components/repositories";
-import useGithub from "./hooks/github-hooks";
+import React, { useState } from "react";
+import Header from "./components/Header/index.js"
+import Mapa from "./components/mapa"
+import Resultado from "./components/Resultado"
+import './App.css'
 
 const App = () => {
-  const { githubState } = useGithub();
+  const [portoEscolhido, setPortoEscolhido] = useState({name: 'Carregando...'})
+
+  const PortoEscolhido = (porto) => {
+    setPortoEscolhido(porto);
+  }
+
   return (
-    <Layout>
-      {githubState.hasUser ? (
-        <>
-          {githubState.loading ? (
-            <p>Loading</p>
-          ) : (
-            <>
-              <Profile />
-              <Repositories />
-            </>
-          )}
-        </>
-      ) : (
-        <NoSearch />
-      )}
-    </Layout>
-  );
+      <div>
+        <Header />
+        <div id="main">
+          <Mapa PortoEscolhido={PortoEscolhido}/>
+          <Resultado portoEscolhido={portoEscolhido}/>
+        </div>
+      </div>  
+  ) 
 };
 
 export default App;

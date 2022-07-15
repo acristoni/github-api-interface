@@ -1,30 +1,16 @@
-import React, { useState } from "react";
-import * as S from "./styled";
-import useGithub from "../../hooks/github-hooks";
+import * as S from "./styled.js";
+import Praia from "../../img/praia.jpg"
+import Logo from "../../img/logomar.png"
 
-const Header = () => {
-  const { getUser } = useGithub();
-  const [usernameForSearch, setUsernameForSearch] = useState();
-
-  const submitGetUser = () => {
-    if (!usernameForSearch) return;
-    return getUser(usernameForSearch);
-  };
-
-  return (
-    <header>
-      <S.Wrapper>
-        <input
-          type="text"
-          placeholder="Digite o username para pesquisa..."
-          onChange={(event) => setUsernameForSearch(event.target.value)}
-        />
-        <button type="submit" onClick={submitGetUser}>
-          <span>Buscar</span>
-        </button>
-      </S.Wrapper>
-    </header>
-  );
-};
-
-export default Header;
+export default function Header() {
+    return (
+        <S.Header>
+            
+            <S.Title>
+                <img id="logo" src={Logo} alt="logo mar" />
+                <h1>Tábua das Marés</h1>
+            </S.Title>
+            <img id="fundo" src={Praia} alt="praia" />
+        </S.Header>
+    )
+}
