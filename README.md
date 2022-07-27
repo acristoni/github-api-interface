@@ -1,3 +1,9 @@
+#Meu "refactoring"
+
+Essa era uma dor antiga, como navegador sempre pensei que a consulta das Tábuas de Maré poderia ser mais fácil de entender e graças a aos conhecimentos adquiridos no Bootcamp da Digital Innovation One Inc. com o mestre Matheus De Amorim Benites no curso "Criando um front-end totalmente componetizado na prática com ReactJS" pude transformar esse antigo desejo em realidade, fazendo um refactoring da aplicação do desafio de projeto criei um mapa do Brasil interativo, onde basta o usuário clicar no porto e escolher uma data no calendário e a mágica acontece! hahaha o aplicativo informa as alturas e os horários das máximas e mínimas marés naquele dia, para isso precisei criar um "mini-banco de dados" com as informações de geolocalização (latitude e longitude) de alguns dos mais importantes portos do Brasil, o aplicativo consome uma API da Stornglass.io que tem o banco de dados com as informações da maré do mundo todo, muito conhecimento adquirido com utilização das bibliotecas axios, react-calendar, styled-components, Context API, entre outras...
+
+---GIF
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
