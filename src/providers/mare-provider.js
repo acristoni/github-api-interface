@@ -1,6 +1,5 @@
 import React, { createContext, useCallback, useState, useEffect } from "react";
 import api from "../services/api";
-///ARRANJAR UM JEITO DE IMPORTAR AS INFORMAÇÕES LAT, LNG E DATA
 
 export const MareContext = createContext([]);
 
